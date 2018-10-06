@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B08B49021684C660066C57A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08B48F21684C660066C57A /* R.generated.swift */; };
 		0B7E9FFB2167C985005A70CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9FFA2167C985005A70CE /* AppDelegate.swift */; };
 		0B7E9FFD2167C985005A70CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9FFC2167C985005A70CE /* ViewController.swift */; };
 		0B7EA0002167C985005A70CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7E9FFE2167C985005A70CE /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B08B48F21684C660066C57A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		0B7E9FF72167C985005A70CE /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7E9FFA2167C985005A70CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B7E9FFC2167C985005A70CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				0B7E9FFA2167C985005A70CE /* AppDelegate.swift */,
+				0B08B48F21684C660066C57A /* R.generated.swift */,
 				0B7E9FFC2167C985005A70CE /* ViewController.swift */,
 				0B7E9FFE2167C985005A70CE /* Main.storyboard */,
 				0B7EA0012167C987005A70CE /* Assets.xcassets */,
@@ -173,6 +176,7 @@
 			buildConfigurationList = 0B7EA01F2167C987005A70CE /* Build configuration list for PBXNativeTarget "SampleProject" */;
 			buildPhases = (
 				06B4E1B512C6D1BE99005F71 /* [CP] Check Pods Manifest.lock */,
+				0B909A5121684A3200662CC3 /* Run Script - R.swift */,
 				0B7E9FF32167C985005A70CE /* Sources */,
 				0B7E9FF42167C985005A70CE /* Frameworks */,
 				0B7E9FF52167C985005A70CE /* Resources */,
@@ -319,6 +323,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0B909A5121684A3200662CC3 /* Run Script - R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - R.swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/$TARGETNAME\"\n";
+		};
 		0E80A6B675AE663A163D34D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +450,7 @@
 			files = (
 				0B7E9FFD2167C985005A70CE /* ViewController.swift in Sources */,
 				0B7E9FFB2167C985005A70CE /* AppDelegate.swift in Sources */,
+				0B08B49021684C660066C57A /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

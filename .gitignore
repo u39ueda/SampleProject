@@ -72,3 +72,5 @@ fastlane/test_output
 /.bundle/
 /vendor/bundle
 
+# Generated file by R.swift
+*.generated.swift
