@@ -25,4 +25,14 @@ target 'SampleProject' do
     # Pods for testing
   end
 
+  target 'Common' do
+      inherit! :search_paths
+      # Pods for Common
+  end
+
+  target 'CommonTests' do
+      inherit! :search_paths
+      # Pods for Common testing
+  end
+
 end
