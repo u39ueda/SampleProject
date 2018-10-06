@@ -1,0 +1,51 @@
+PODS:
+  - KeychainAccess (3.1.1)
+  - R.swift (5.0.0.alpha.2):
+    - R.swift.Library (~> 5.0.0.alpha.2)
+  - R.swift.Library (5.0.0.alpha.2)
+  - ReachabilitySwift (4.3.0)
+  - RxBlocking (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+  - RxTest (4.3.1):
+    - RxSwift (~> 4.0)
+  - SwiftLint (0.27.0)
+
+DEPENDENCIES:
+  - KeychainAccess
+  - R.swift (= 5.0.0.alpha.2)
+  - ReachabilitySwift (~> 4.3)
+  - RxBlocking (~> 4.3)
+  - RxCocoa (~> 4.3)
+  - RxSwift (~> 4.3)
+  - RxTest (~> 4.3)
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KeychainAccess
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - RxBlocking
+    - RxCocoa
+    - RxSwift
+    - RxTest
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
+  R.swift: 31fa1bd537fa81307815cc622122f33331f32174
+  R.swift.Library: 3c21b823839bf5a6769dc7f96cb44479dab51b1b
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  RxBlocking: 64c051285261ca2339481e91b5f70eb06b03660a
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxTest: ea97a208826906f3904c0debdd09575ebcbfe216
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+
+PODFILE CHECKSUM: 6eaaf026666e1cabfb81c69bc7a89948b5a64369
+
+COCOAPODS: 1.5.3
