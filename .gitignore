@@ -66,3 +66,11 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# bundler
+
+/.bundle/
+/vendor/bundle
+
+# Generated file by R.swift
+*.generated.swift
