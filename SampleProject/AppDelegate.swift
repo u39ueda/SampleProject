@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Common
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // 画面作成
+        let vc: UIViewController = R.storyboard.main.instantiateInitialViewController()!
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = R.storyboard.main.instantiateInitialViewController()
+        window?.rootViewController = AppViewController(viewController: vc)
         window?.makeKeyAndVisible()
 
         return true
