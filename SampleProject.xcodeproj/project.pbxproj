@@ -21,6 +21,11 @@
 		0B7EA0052167C987005A70CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7EA0032167C987005A70CE /* LaunchScreen.storyboard */; };
 		0B7EA0102167C987005A70CE /* SampleProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7EA00F2167C987005A70CE /* SampleProjectTests.swift */; };
 		0B7EA01B2167C987005A70CE /* SampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7EA01A2167C987005A70CE /* SampleProjectUITests.swift */; };
+		0B7FF055216ADF5100161B22 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF050216ADF5100161B22 /* MainPresenter.swift */; };
+		0B7FF056216ADF5100161B22 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF051216ADF5100161B22 /* MainRouter.swift */; };
+		0B7FF057216ADF5100161B22 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF052216ADF5100161B22 /* MainViewController.swift */; };
+		0B7FF058216ADF5100161B22 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF053216ADF5100161B22 /* MainProtocols.swift */; };
+		0B7FF059216ADF5100161B22 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7FF054216ADF5100161B22 /* MainViewController.xib */; };
 		0BACF50A216A631E00795DAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BACF509216A631E00795DAF /* main.swift */; };
 		0BACF50C216A63AD00795DAF /* UnitTestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BACF50B216A63AD00795DAF /* UnitTestsAppDelegate.swift */; };
 		0BACF50F216A650C00795DAF /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BACF50E216A650C00795DAF /* AppViewController.swift */; };
@@ -103,6 +108,11 @@
 		0B7EA0162167C987005A70CE /* SampleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7EA01A2167C987005A70CE /* SampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProjectUITests.swift; sourceTree = "<group>"; };
 		0B7EA01C2167C987005A70CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B7FF050216ADF5100161B22 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		0B7FF051216ADF5100161B22 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		0B7FF052216ADF5100161B22 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0B7FF053216ADF5100161B22 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
+		0B7FF054216ADF5100161B22 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		0BACF509216A631E00795DAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0BACF50B216A63AD00795DAF /* UnitTestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestsAppDelegate.swift; sourceTree = "<group>"; };
 		0BACF50E216A650C00795DAF /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +260,14 @@
 			path = SampleProjectUITests;
 			sourceTree = "<group>";
 		};
+		0B7FF05A216ADFE900161B22 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0B7FF053216ADF5100161B22 /* MainProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		0BACF50D216A64F100795DAF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +279,7 @@
 		0BF60722216ABCDA006EE7FD /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				0B7FF050216ADF5100161B22 /* MainPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -303,10 +322,10 @@
 		0BF60728216ABD46006EE7FD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0BF6072F216ABE86006EE7FD /* ViewObjects */,
 				0BF60722216ABCDA006EE7FD /* Presenters */,
 				0BF6072D216ABE5D006EE7FD /* Routers */,
 				0BF6072B216ABE10006EE7FD /* ViewControllers */,
+				0BF6072F216ABE86006EE7FD /* ViewObjects */,
 				0BF60723216ABCEB006EE7FD /* Views */,
 			);
 			path = Presentation;
@@ -317,6 +336,7 @@
 			children = (
 				0BF6072E216ABE7D006EE7FD /* Entities */,
 				0BF60726216ABD0D006EE7FD /* Managers */,
+				0B7FF05A216ADFE900161B22 /* Protocols */,
 				0BF60725216ABD05006EE7FD /* Repositories */,
 				0BF60724216ABCF8006EE7FD /* Usecases */,
 			);
@@ -335,6 +355,8 @@
 		0BF6072B216ABE10006EE7FD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B7FF052216ADF5100161B22 /* MainViewController.swift */,
+				0B7FF054216ADF5100161B22 /* MainViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -342,6 +364,7 @@
 		0BF6072D216ABE5D006EE7FD /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				0B7FF051216ADF5100161B22 /* MainRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -587,6 +610,7 @@
 				0B7EA0052167C987005A70CE /* LaunchScreen.storyboard in Resources */,
 				0B7EA0022167C987005A70CE /* Assets.xcassets in Resources */,
 				0B7EA0002167C985005A70CE /* Main.storyboard in Resources */,
+				0B7FF059216ADF5100161B22 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,10 +856,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7FF058216ADF5100161B22 /* MainProtocols.swift in Sources */,
+				0B7FF057216ADF5100161B22 /* MainViewController.swift in Sources */,
+				0B7FF055216ADF5100161B22 /* MainPresenter.swift in Sources */,
 				0B7E9FFD2167C985005A70CE /* ViewController.swift in Sources */,
 				0B7E9FFB2167C985005A70CE /* AppDelegate.swift in Sources */,
 				0BACF50A216A631E00795DAF /* main.swift in Sources */,
 				0B08B49021684C660066C57A /* R.generated.swift in Sources */,
+				0B7FF056216ADF5100161B22 /* MainRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
