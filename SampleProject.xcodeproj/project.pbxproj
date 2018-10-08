@@ -26,6 +26,11 @@
 		0B7FF057216ADF5100161B22 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF052216ADF5100161B22 /* MainViewController.swift */; };
 		0B7FF058216ADF5100161B22 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF053216ADF5100161B22 /* MainProtocols.swift */; };
 		0B7FF059216ADF5100161B22 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7FF054216ADF5100161B22 /* MainViewController.xib */; };
+		0B7FF060216AE13600161B22 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF05B216AE13600161B22 /* LoginPresenter.swift */; };
+		0B7FF061216AE13600161B22 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF05C216AE13600161B22 /* LoginRouter.swift */; };
+		0B7FF062216AE13600161B22 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF05D216AE13600161B22 /* LoginViewController.swift */; };
+		0B7FF063216AE13600161B22 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF05E216AE13600161B22 /* LoginProtocols.swift */; };
+		0B7FF064216AE13600161B22 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7FF05F216AE13600161B22 /* LoginViewController.xib */; };
 		0BACF50A216A631E00795DAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BACF509216A631E00795DAF /* main.swift */; };
 		0BACF50C216A63AD00795DAF /* UnitTestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BACF50B216A63AD00795DAF /* UnitTestsAppDelegate.swift */; };
 		0BACF50F216A650C00795DAF /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BACF50E216A650C00795DAF /* AppViewController.swift */; };
@@ -113,6 +118,11 @@
 		0B7FF052216ADF5100161B22 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0B7FF053216ADF5100161B22 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
 		0B7FF054216ADF5100161B22 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		0B7FF05B216AE13600161B22 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		0B7FF05C216AE13600161B22 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		0B7FF05D216AE13600161B22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0B7FF05E216AE13600161B22 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		0B7FF05F216AE13600161B22 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		0BACF509216A631E00795DAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0BACF50B216A63AD00795DAF /* UnitTestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestsAppDelegate.swift; sourceTree = "<group>"; };
 		0BACF50E216A650C00795DAF /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +273,7 @@
 		0B7FF05A216ADFE900161B22 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				0B7FF05E216AE13600161B22 /* LoginProtocols.swift */,
 				0B7FF053216ADF5100161B22 /* MainProtocols.swift */,
 			);
 			path = Protocols;
@@ -279,6 +290,7 @@
 		0BF60722216ABCDA006EE7FD /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				0B7FF05B216AE13600161B22 /* LoginPresenter.swift */,
 				0B7FF050216ADF5100161B22 /* MainPresenter.swift */,
 			);
 			path = Presenters;
@@ -355,6 +367,8 @@
 		0BF6072B216ABE10006EE7FD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B7FF05D216AE13600161B22 /* LoginViewController.swift */,
+				0B7FF05F216AE13600161B22 /* LoginViewController.xib */,
 				0B7FF052216ADF5100161B22 /* MainViewController.swift */,
 				0B7FF054216ADF5100161B22 /* MainViewController.xib */,
 			);
@@ -364,6 +378,7 @@
 		0BF6072D216ABE5D006EE7FD /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				0B7FF05C216AE13600161B22 /* LoginRouter.swift */,
 				0B7FF051216ADF5100161B22 /* MainRouter.swift */,
 			);
 			path = Routers;
@@ -607,6 +622,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7FF064216AE13600161B22 /* LoginViewController.xib in Resources */,
 				0B7EA0052167C987005A70CE /* LaunchScreen.storyboard in Resources */,
 				0B7EA0022167C987005A70CE /* Assets.xcassets in Resources */,
 				0B7EA0002167C985005A70CE /* Main.storyboard in Resources */,
@@ -859,11 +875,15 @@
 				0B7FF058216ADF5100161B22 /* MainProtocols.swift in Sources */,
 				0B7FF057216ADF5100161B22 /* MainViewController.swift in Sources */,
 				0B7FF055216ADF5100161B22 /* MainPresenter.swift in Sources */,
+				0B7FF060216AE13600161B22 /* LoginPresenter.swift in Sources */,
 				0B7E9FFD2167C985005A70CE /* ViewController.swift in Sources */,
 				0B7E9FFB2167C985005A70CE /* AppDelegate.swift in Sources */,
 				0BACF50A216A631E00795DAF /* main.swift in Sources */,
 				0B08B49021684C660066C57A /* R.generated.swift in Sources */,
+				0B7FF061216AE13600161B22 /* LoginRouter.swift in Sources */,
+				0B7FF063216AE13600161B22 /* LoginProtocols.swift in Sources */,
 				0B7FF056216ADF5100161B22 /* MainRouter.swift in Sources */,
+				0B7FF062216AE13600161B22 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
