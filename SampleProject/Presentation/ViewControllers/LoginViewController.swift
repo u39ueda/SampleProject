@@ -64,4 +64,11 @@ final class LoginViewController: UIViewController, LoginViewProtocol {
 
 // MARK: - Methods
 // MARK: - Actions
+
+extension LoginViewController {
+    @IBAction func onLoginButton(_ sender: UIButton) {
+        presenter?.onLoginButton()
+    }
+}
+
 // MARK: - Notifications

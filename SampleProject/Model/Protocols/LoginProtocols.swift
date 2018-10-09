@@ -33,6 +33,8 @@ public protocol LoginPresenterProtocol: class {
     func viewDidAppear(_ animated: Bool)
     func viewWillDisappear(_ animated: Bool)
     func viewDidDisappear(_ animated: Bool)
+    /// ログインボタン押下時
+    func onLoginButton()
 
     // MARK: Presenter -> ViewController
 }

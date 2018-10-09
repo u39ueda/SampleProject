@@ -46,5 +46,8 @@ final class LoginPresenter: LoginPresenterProtocol {
     func viewDidDisappear(_ animated: Bool) {
     }
 
+    func onLoginButton() {
+    }
+
     // MARK: Presenter -> ViewController
 }
