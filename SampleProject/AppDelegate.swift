@@ -47,3 +47,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+// MARK: - Helper
+
+extension AppDelegate {
+
+    /// AppDelegateへのショートカット
+    static var shared: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+
+    /// アプリのルートへのショートカット
+    var appViewController: AppViewController {
+        return window?.rootViewController as! AppViewController
+    }
+
+}
