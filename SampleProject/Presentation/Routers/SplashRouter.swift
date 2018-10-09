@@ -19,7 +19,7 @@ final class SplashRouter: SplashWireframeProtocol {
     /// Factory method
     static func createModule() -> SplashViewController {
         // Change to get view from storyboard if not using progammatic UI
-        let view = R.storyboard.main.splash()!
+        let view = R.storyboard.splash.splash()!
         let router = SplashRouter()
         let presenter = SplashPresenter(interface: view, router: router)
 
