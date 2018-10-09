@@ -14,6 +14,10 @@
 		0B2BBC2F216858F7002E2209 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2BBC1F216858F6002E2209 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B2BBC32216858F7002E2209 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2BBC1D216858F6002E2209 /* Common.framework */; };
 		0B2BBC33216858F7002E2209 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2BBC1D216858F6002E2209 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B795962216D01E800AE44AF /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79595E216D01E800AE44AF /* SplashPresenter.swift */; };
+		0B795963216D01E800AE44AF /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79595F216D01E800AE44AF /* SplashRouter.swift */; };
+		0B795964216D01E800AE44AF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B795960216D01E800AE44AF /* SplashViewController.swift */; };
+		0B795965216D01E800AE44AF /* SplashProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B795961216D01E800AE44AF /* SplashProtocols.swift */; };
 		0B7E9FFB2167C985005A70CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9FFA2167C985005A70CE /* AppDelegate.swift */; };
 		0B7E9FFD2167C985005A70CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7E9FFC2167C985005A70CE /* ViewController.swift */; };
 		0B7EA0002167C985005A70CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7E9FFE2167C985005A70CE /* Main.storyboard */; };
@@ -100,6 +104,10 @@
 		0B2BBC25216858F6002E2209 /* CommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2BBC2C216858F7002E2209 /* CommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTests.swift; sourceTree = "<group>"; };
 		0B2BBC2E216858F7002E2209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B79595E216D01E800AE44AF /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		0B79595F216D01E800AE44AF /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		0B795960216D01E800AE44AF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0B795961216D01E800AE44AF /* SplashProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProtocols.swift; sourceTree = "<group>"; };
 		0B7E9FF72167C985005A70CE /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B7E9FFA2167C985005A70CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B7E9FFC2167C985005A70CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +283,7 @@
 			children = (
 				0B7FF05E216AE13600161B22 /* LoginProtocols.swift */,
 				0B7FF053216ADF5100161B22 /* MainProtocols.swift */,
+				0B795961216D01E800AE44AF /* SplashProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -292,6 +301,7 @@
 			children = (
 				0B7FF05B216AE13600161B22 /* LoginPresenter.swift */,
 				0B7FF050216ADF5100161B22 /* MainPresenter.swift */,
+				0B79595E216D01E800AE44AF /* SplashPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -371,6 +381,7 @@
 				0B7FF05F216AE13600161B22 /* LoginViewController.xib */,
 				0B7FF052216ADF5100161B22 /* MainViewController.swift */,
 				0B7FF054216ADF5100161B22 /* MainViewController.xib */,
+				0B795960216D01E800AE44AF /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -380,6 +391,7 @@
 			children = (
 				0B7FF05C216AE13600161B22 /* LoginRouter.swift */,
 				0B7FF051216ADF5100161B22 /* MainRouter.swift */,
+				0B79595F216D01E800AE44AF /* SplashRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -872,6 +884,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B795965216D01E800AE44AF /* SplashProtocols.swift in Sources */,
 				0B7FF058216ADF5100161B22 /* MainProtocols.swift in Sources */,
 				0B7FF057216ADF5100161B22 /* MainViewController.swift in Sources */,
 				0B7FF055216ADF5100161B22 /* MainPresenter.swift in Sources */,
@@ -881,9 +894,12 @@
 				0BACF50A216A631E00795DAF /* main.swift in Sources */,
 				0B08B49021684C660066C57A /* R.generated.swift in Sources */,
 				0B7FF061216AE13600161B22 /* LoginRouter.swift in Sources */,
+				0B795964216D01E800AE44AF /* SplashViewController.swift in Sources */,
+				0B795963216D01E800AE44AF /* SplashRouter.swift in Sources */,
 				0B7FF063216AE13600161B22 /* LoginProtocols.swift in Sources */,
 				0B7FF056216ADF5100161B22 /* MainRouter.swift in Sources */,
 				0B7FF062216AE13600161B22 /* LoginViewController.swift in Sources */,
+				0B795962216D01E800AE44AF /* SplashPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
