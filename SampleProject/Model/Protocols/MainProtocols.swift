@@ -17,6 +17,8 @@ import Foundation
 /// Routerに適用する.
 /// Presenter -> Wireframe
 public protocol MainWireframeProtocol: class {
+    /// ログイン画面へ遷移する
+    func showLogin()
 }
 
 // MARK: - Presenter
@@ -33,6 +35,8 @@ public protocol MainPresenterProtocol: class {
     func viewDidAppear(_ animated: Bool)
     func viewWillDisappear(_ animated: Bool)
     func viewDidDisappear(_ animated: Bool)
+    /// ログインボタンが押された
+    func onLoginButton()
 
     // MARK: Presenter -> ViewController
 }

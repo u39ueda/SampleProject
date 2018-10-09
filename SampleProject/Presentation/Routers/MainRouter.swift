@@ -38,4 +38,10 @@ final class MainRouter: MainWireframeProtocol {
     }
 
     // MARK: - WireframeProtocol
+
+    /// ログイン画面へ遷移する
+    func showLogin() {
+        let vc = LoginRouter.createModule()
+        viewController?.navigationController?.pushViewController(vc, animated: true)
+    }
 }

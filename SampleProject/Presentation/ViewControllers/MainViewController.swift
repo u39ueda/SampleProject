@@ -63,5 +63,13 @@ final class MainViewController: UIViewController, MainViewProtocol {
 }
 
 // MARK: - Methods
+
 // MARK: - Actions
+
+extension MainViewController {
+    @IBAction func onLoginButton(_ sender: UIButton) {
+        presenter?.onLoginButton()
+    }
+}
+
 // MARK: - Notifications

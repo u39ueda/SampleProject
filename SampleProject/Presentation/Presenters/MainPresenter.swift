@@ -48,3 +48,11 @@ final class MainPresenter: MainPresenterProtocol {
 
     // MARK: Presenter -> ViewController
 }
+
+// MARK: - Action
+
+extension MainPresenter {
+    func onLoginButton() {
+        router.showLogin()
+    }
+}
