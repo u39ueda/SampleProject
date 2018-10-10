@@ -9,6 +9,7 @@
 //
 
 import Foundation
+import RxSwift
 
 // MARK: - Wireframe
 
@@ -34,9 +35,18 @@ public protocol LoginPresenterProtocol: class {
     func viewWillDisappear(_ animated: Bool)
     func viewDidDisappear(_ animated: Bool)
     /// ログインボタン押下時
-    func onLoginButton()
+    ///
+    /// - Parameters:
+    ///   - memberId: 会員ID
+    ///   - password: パスワード
+    func onLoginButton(memberId: String, password: String)
 
     // MARK: Presenter -> ViewController
+
+    /// ログインの有効フラグ
+    var isLoginEnabled: Observable<Bool> { get }
+    /// ローディング中フラグ
+    var isLoading: Observable<Bool> { get }
 }
 
 // MARK: - View

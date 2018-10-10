@@ -9,12 +9,22 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class LoginViewController: UIViewController, LoginViewProtocol {
 
     // MARK: - IBOutlet
 
+    @IBOutlet weak var memberIdLabel: UILabel!
+    @IBOutlet weak var memberIdTextField: UITextField!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+
     // MARK: Properties
+
+    private let disposeBag = DisposeBag()
 
 	var presenter: LoginPresenterProtocol?
 
@@ -25,6 +35,8 @@ final class LoginViewController: UIViewController, LoginViewProtocol {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+
+        bindViews()
 
         presenter?.viewDidLoad()
     }
@@ -63,11 +75,26 @@ final class LoginViewController: UIViewController, LoginViewProtocol {
 }
 
 // MARK: - Methods
+
+extension LoginViewController {
+    /// 変数とビューをバインド
+    private func bindViews() {
+        // ログインの有効フラグをボタンの有効フラグに反映
+        presenter?.isLoginEnabled
+//            .do(onNext: { (isEnabled) in print("isLoginEnabled=\(isEnabled)") })
+            .asDriver(onErrorJustReturn: true)
+            .drive(loginButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+    }
+}
+
 // MARK: - Actions
 
 extension LoginViewController {
     @IBAction func onLoginButton(_ sender: UIButton) {
-        presenter?.onLoginButton()
+        let memberId: String = memberIdTextField.text ?? ""
+        let password: String = passwordTextField.text ?? ""
+        presenter?.onLoginButton(memberId: memberId, password: password)
     }
 }
 
