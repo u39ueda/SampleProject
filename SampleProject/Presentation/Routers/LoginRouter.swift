@@ -25,6 +25,7 @@ final class LoginRouter: LoginWireframeProtocol {
 
         view.presenter = presenter
         router.viewController = view
+        presenter.loginUsecase = LoginUsecase()
 
         return view
     }

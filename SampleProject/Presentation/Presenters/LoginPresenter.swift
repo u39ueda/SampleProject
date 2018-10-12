@@ -18,7 +18,9 @@ final class LoginPresenter: LoginPresenterProtocol {
 
     private weak var view: LoginViewProtocol?
     private let router: LoginWireframeProtocol
+    var loginUsecase: LoginUsecaseProtocol?
     private let isLoginExecuting = BehaviorRelay<Bool>(value: false)
+    private let loginDisposable = SingleAssignmentDisposable()
 
     // MARK: - Life cycle
 
@@ -50,8 +52,19 @@ final class LoginPresenter: LoginPresenterProtocol {
     }
 
     func onLoginButton(memberId: String, password: String) {
+        guard let loginUsecase = loginUsecase else { return }
         print(#function, "start")
         isLoginExecuting.accept(true)
+        let disposable = loginUsecase.login(memberId: memberId, password: password)
+            .subscribe(onSuccess: {
+                print(#function, "finish execute")
+                self.isLoginExecuting.accept(false)
+            }, onError: { (error: Error) in
+                print(#function, "failure execute. error=\(error)")
+                self.isLoginExecuting.accept(false)
+            })
+        loginDisposable.setDisposable(disposable)
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             print(#function, "finish execute")
             self.isLoginExecuting.accept(false)
