@@ -22,10 +22,13 @@ final class LoginRouter: LoginWireframeProtocol {
         let view = LoginViewController(nibName: nil, bundle: nil)
         let router = LoginRouter()
         let presenter = LoginPresenter(interface: view, router: router)
+        let repository = AccountRepository.shared
+        let usecase = LoginUsecase()
 
         view.presenter = presenter
         router.viewController = view
-        presenter.loginUsecase = LoginUsecase()
+        presenter.loginUsecase = usecase
+        usecase.accountRepository = repository
 
         return view
     }

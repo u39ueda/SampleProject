@@ -14,6 +14,8 @@ final class LoginUsecase: LoginUsecaseProtocol {
 
     // MARK: Properties
 
+    weak var accountRepository: AccountRepositoryProtocol?
+
     // MARK: - Life cycle
 
     /// コンストラクタ
