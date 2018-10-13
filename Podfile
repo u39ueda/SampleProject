@@ -12,6 +12,7 @@ target 'SampleProject' do
   pod 'RxSwift', '~> 4.3'
   pod 'RxCocoa', '~> 4.3'
   pod 'KeychainAccess'
+  pod 'XCGLogger', '~> 6.1.0'
 
   target 'SampleProjectTests' do
     inherit! :search_paths
