@@ -10,13 +10,16 @@ import Foundation
 import RxSwift
 
 /// アカウント関連のデータを取得・更新するリポジトリ.
-class AccountRepository: AccountRepositoryProtocol {
+public final class AccountRepository: AccountRepositoryProtocol {
 
     // MARK: Properties
 
     /// シングルトン
-    static let shared = AccountRepository()
+    public static let shared = AccountRepository()
 
     // MARK: - Life cycle
 
+    /// コンストラクタ
+    public init() {
+    }
 }

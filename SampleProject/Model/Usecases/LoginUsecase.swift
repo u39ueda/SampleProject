@@ -10,16 +10,16 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class LoginUsecase: LoginUsecaseProtocol {
+public final class LoginUsecase: LoginUsecaseProtocol {
 
     // MARK: Properties
 
-    weak var accountRepository: AccountRepositoryProtocol?
+    public weak var accountRepository: AccountRepositoryProtocol?
 
     // MARK: - Life cycle
 
     /// コンストラクタ
-    init() {
+    public init() {
     }
 
     /// ログイン処理
@@ -29,7 +29,7 @@ final class LoginUsecase: LoginUsecaseProtocol {
     ///   - memberId: 会員ID
     ///   - password: パスワード
     /// - Returns: 完了の通知
-    func login(memberId: String, password: String) -> Single<Void> {
+    public func login(memberId: String, password: String) -> Single<Void> {
         return Observable.create({ (observer) -> Disposable in
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                 observer.onCompleted()

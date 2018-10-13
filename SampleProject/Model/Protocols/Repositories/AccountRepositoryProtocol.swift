@@ -9,5 +9,5 @@
 import Foundation
 
 /// アカウント関連のデータを取得・更新するリポジトリ.
-protocol AccountRepositoryProtocol: class {
+public protocol AccountRepositoryProtocol: class {
 }
