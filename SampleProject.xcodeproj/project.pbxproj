@@ -19,6 +19,7 @@
 		0B4EBBE72170F888004CE93C /* AccountRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EBBE52170F888004CE93C /* AccountRepositoryProtocol.swift */; };
 		0B4EBBE82170F888004CE93C /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EBBE62170F888004CE93C /* AccountRepository.swift */; };
 		0B4EBBEA21716CFE004CE93C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EBBE921716CFE004CE93C /* TestViewController.swift */; };
+		0B4EBC00217196CB004CE93C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EBBFF217196CB004CE93C /* Logger.swift */; };
 		0B795962216D01E800AE44AF /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79595E216D01E800AE44AF /* SplashPresenter.swift */; };
 		0B795963216D01E800AE44AF /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79595F216D01E800AE44AF /* SplashRouter.swift */; };
 		0B795964216D01E800AE44AF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B795960216D01E800AE44AF /* SplashViewController.swift */; };
@@ -125,6 +126,7 @@
 		0B4EBBFC21717A7C004CE93C /* SampleProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleProjectUITests.debug.xcconfig; sourceTree = "<group>"; };
 		0B4EBBFD21717A7C004CE93C /* SampleProjectUITests.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleProjectUITests.release.xcconfig; sourceTree = "<group>"; };
 		0B4EBBFE21717A7C004CE93C /* CommonTests.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonTests.release.xcconfig; sourceTree = "<group>"; };
+		0B4EBBFF217196CB004CE93C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		0B79595E216D01E800AE44AF /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		0B79595F216D01E800AE44AF /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		0B795960216D01E800AE44AF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				0B2BBC1F216858F6002E2209 /* Common.h */,
 				0BF60730216ABF01006EE7FD /* Resources */,
 				0BACF50D216A64F100795DAF /* ViewController */,
+				0B4EBBFF217196CB004CE93C /* Logger.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -941,6 +944,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BACF50F216A650C00795DAF /* AppViewController.swift in Sources */,
+				0B4EBC00217196CB004CE93C /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
