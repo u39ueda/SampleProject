@@ -9,6 +9,7 @@
 //
 
 import Foundation
+import Common
 import RxSwift
 import RxCocoa
 
@@ -53,23 +54,23 @@ final class LoginPresenter: LoginPresenterProtocol {
 
     func onLoginButton(memberId: String, password: String) {
         guard let loginUsecase = loginUsecase else { return }
-        print(#function, "start")
+        log.info("start")
         isLoginExecuting.accept(true)
         let disposable = loginUsecase.login(memberId: memberId, password: password)
             .subscribe(onSuccess: {
-                print(#function, "finish execute")
+                log.info("finish execute")
                 self.isLoginExecuting.accept(false)
             }, onError: { (error: Error) in
-                print(#function, "failure execute. error=\(error)")
+                log.info("failure execute. error=\(error)")
                 self.isLoginExecuting.accept(false)
             })
         loginDisposable.setDisposable(disposable)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            print(#function, "finish execute")
+            log.info("finish execute")
             self.isLoginExecuting.accept(false)
         }
-        print(#function, "finish")
+        log.info("finish")
     }
 
     // MARK: Presenter -> ViewController

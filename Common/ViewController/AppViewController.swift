@@ -46,7 +46,7 @@ public final class AppViewController: UIViewController {
 
     public func setCurrentViewController(_ newViewController: UIViewController, animated: Bool) {
         guard _currentViewController != newViewController else {
-            print("currentViewController and newViewController is same.")
+            log.warning("currentViewController and newViewController is same.")
             return
         }
         let oldViewController = _currentViewController

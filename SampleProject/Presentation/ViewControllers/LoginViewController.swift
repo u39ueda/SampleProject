@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Common
 import RxSwift
 import RxCocoa
 
@@ -81,7 +82,7 @@ extension LoginViewController {
     private func bindViews() {
         // ログインの有効フラグをボタンの有効フラグに反映
         presenter?.isLoginEnabled
-//            .do(onNext: { (isEnabled) in print("isLoginEnabled=\(isEnabled)") })
+//            .do(onNext: { (isEnabled) in log.debug("isLoginEnabled=\(isEnabled)") })
             .asDriver(onErrorJustReturn: true)
             .drive(loginButton.rx.isEnabled)
             .disposed(by: disposeBag)
