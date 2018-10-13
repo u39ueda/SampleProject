@@ -113,6 +113,18 @@
 		0B4EBBE52170F888004CE93C /* AccountRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepositoryProtocol.swift; sourceTree = "<group>"; };
 		0B4EBBE62170F888004CE93C /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
 		0B4EBBE921716CFE004CE93C /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		0B4EBBF2217177B6004CE93C /* SampleProject.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleProject.debug.xcconfig; sourceTree = "<group>"; };
+		0B4EBBF3217178E3004CE93C /* Common.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.release.xcconfig; sourceTree = "<group>"; };
+		0B4EBBF4217178E3004CE93C /* SampleProject.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleProject.release.xcconfig; sourceTree = "<group>"; };
+		0B4EBBF5217178E3004CE93C /* Common.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.debug.xcconfig; sourceTree = "<group>"; };
+		0B4EBBF621717933004CE93C /* Base.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.release.xcconfig; sourceTree = "<group>"; };
+		0B4EBBF721717933004CE93C /* Base.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.debug.xcconfig; sourceTree = "<group>"; };
+		0B4EBBF921717A7C004CE93C /* CommonTests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonTests.debug.xcconfig; sourceTree = "<group>"; };
+		0B4EBBFA21717A7C004CE93C /* SampleProjectTests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleProjectTests.debug.xcconfig; sourceTree = "<group>"; };
+		0B4EBBFB21717A7C004CE93C /* SampleProjectTests.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleProjectTests.release.xcconfig; sourceTree = "<group>"; };
+		0B4EBBFC21717A7C004CE93C /* SampleProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleProjectUITests.debug.xcconfig; sourceTree = "<group>"; };
+		0B4EBBFD21717A7C004CE93C /* SampleProjectUITests.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SampleProjectUITests.release.xcconfig; sourceTree = "<group>"; };
+		0B4EBBFE21717A7C004CE93C /* CommonTests.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonTests.release.xcconfig; sourceTree = "<group>"; };
 		0B79595E216D01E800AE44AF /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		0B79595F216D01E800AE44AF /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		0B795960216D01E800AE44AF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +252,33 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		0B4EBBF12171778F004CE93C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B4EBBF8217179B2004CE93C /* Config */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		0B4EBBF8217179B2004CE93C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0B4EBBF721717933004CE93C /* Base.debug.xcconfig */,
+				0B4EBBF621717933004CE93C /* Base.release.xcconfig */,
+				0B4EBBF5217178E3004CE93C /* Common.debug.xcconfig */,
+				0B4EBBF3217178E3004CE93C /* Common.release.xcconfig */,
+				0B4EBBF921717A7C004CE93C /* CommonTests.debug.xcconfig */,
+				0B4EBBFE21717A7C004CE93C /* CommonTests.release.xcconfig */,
+				0B4EBBF2217177B6004CE93C /* SampleProject.debug.xcconfig */,
+				0B4EBBF4217178E3004CE93C /* SampleProject.release.xcconfig */,
+				0B4EBBFA21717A7C004CE93C /* SampleProjectTests.debug.xcconfig */,
+				0B4EBBFB21717A7C004CE93C /* SampleProjectTests.release.xcconfig */,
+				0B4EBBFC21717A7C004CE93C /* SampleProjectUITests.debug.xcconfig */,
+				0B4EBBFD21717A7C004CE93C /* SampleProjectUITests.release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		0B7E9FEE2167C985005A70CE = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +287,7 @@
 				0B7EA0192167C987005A70CE /* SampleProjectUITests */,
 				0B2BBC1E216858F6002E2209 /* Common */,
 				0B2BBC2B216858F6002E2209 /* CommonTests */,
+				0B4EBBF12171778F004CE93C /* Support Files */,
 				0B7E9FF82167C985005A70CE /* Products */,
 				6E60F700759B6150B278E266 /* Pods */,
 				19784D82119B278F2F3DBA48 /* Frameworks */,
@@ -1004,7 +1044,7 @@
 /* Begin XCBuildConfiguration section */
 		0B2BBC35216858F7002E2209 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F37DA764B917E3E809C02325 /* Pods-Common.debug.xcconfig */;
+			baseConfigurationReference = 0B4EBBF5217178E3004CE93C /* Common.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1034,7 +1074,7 @@
 		};
 		0B2BBC36216858F7002E2209 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F210BB59953FD4DFD38E2EB1 /* Pods-Common.release.xcconfig */;
+			baseConfigurationReference = 0B4EBBF3217178E3004CE93C /* Common.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1063,7 +1103,7 @@
 		};
 		0B2BBC39216858F7002E2209 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C46CE0EE79F0BA81EA8E5728 /* Pods-CommonTests.debug.xcconfig */;
+			baseConfigurationReference = 0B4EBBF921717A7C004CE93C /* CommonTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1083,7 +1123,7 @@
 		};
 		0B2BBC3A216858F7002E2209 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B3E17F1D1B5851721D5EED3 /* Pods-CommonTests.release.xcconfig */;
+			baseConfigurationReference = 0B4EBBFE21717A7C004CE93C /* CommonTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1219,7 +1259,7 @@
 		};
 		0B7EA0202167C987005A70CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51BED29985C17606858609E3 /* Pods-SampleProject.debug.xcconfig */;
+			baseConfigurationReference = 0B4EBBF2217177B6004CE93C /* SampleProject.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1238,7 +1278,7 @@
 		};
 		0B7EA0212167C987005A70CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4196E6DBECDC9E825226B8D9 /* Pods-SampleProject.release.xcconfig */;
+			baseConfigurationReference = 0B4EBBF4217178E3004CE93C /* SampleProject.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1257,7 +1297,7 @@
 		};
 		0B7EA0232167C987005A70CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BC37015CB72C47CDCCCE04D /* Pods-SampleProjectTests.debug.xcconfig */;
+			baseConfigurationReference = 0B4EBBFA21717A7C004CE93C /* SampleProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1278,7 +1318,7 @@
 		};
 		0B7EA0242167C987005A70CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8A123B822F02786BD4F3B4F /* Pods-SampleProjectTests.release.xcconfig */;
+			baseConfigurationReference = 0B4EBBFB21717A7C004CE93C /* SampleProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1299,7 +1339,7 @@
 		};
 		0B7EA0262167C987005A70CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0492881548E21E1715CB190 /* Pods-SampleProjectUITests.debug.xcconfig */;
+			baseConfigurationReference = 0B4EBBFC21717A7C004CE93C /* SampleProjectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1319,7 +1359,7 @@
 		};
 		0B7EA0272167C987005A70CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8FCB31FD062BB9D497D12B2 /* Pods-SampleProjectUITests.release.xcconfig */;
+			baseConfigurationReference = 0B4EBBFD21717A7C004CE93C /* SampleProjectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
