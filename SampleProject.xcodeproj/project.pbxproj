@@ -18,6 +18,7 @@
 		0B4EBBD72170F128004CE93C /* LoginUsecaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EBBD62170F128004CE93C /* LoginUsecaseProtocol.swift */; };
 		0B4EBBE72170F888004CE93C /* AccountRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EBBE52170F888004CE93C /* AccountRepositoryProtocol.swift */; };
 		0B4EBBE82170F888004CE93C /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EBBE62170F888004CE93C /* AccountRepository.swift */; };
+		0B4EBBEA21716CFE004CE93C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EBBE921716CFE004CE93C /* TestViewController.swift */; };
 		0B795962216D01E800AE44AF /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79595E216D01E800AE44AF /* SplashPresenter.swift */; };
 		0B795963216D01E800AE44AF /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79595F216D01E800AE44AF /* SplashRouter.swift */; };
 		0B795964216D01E800AE44AF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B795960216D01E800AE44AF /* SplashViewController.swift */; };
@@ -111,6 +112,7 @@
 		0B4EBBD62170F128004CE93C /* LoginUsecaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecaseProtocol.swift; sourceTree = "<group>"; };
 		0B4EBBE52170F888004CE93C /* AccountRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepositoryProtocol.swift; sourceTree = "<group>"; };
 		0B4EBBE62170F888004CE93C /* AccountRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
+		0B4EBBE921716CFE004CE93C /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		0B79595E216D01E800AE44AF /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		0B79595F216D01E800AE44AF /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		0B795960216D01E800AE44AF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				0B7FF052216ADF5100161B22 /* MainViewController.swift */,
 				0B7FF054216ADF5100161B22 /* MainViewController.xib */,
 				0B795960216D01E800AE44AF /* SplashViewController.swift */,
+				0B4EBBE921716CFE004CE93C /* TestViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -923,6 +926,7 @@
 				0B4EBBE72170F888004CE93C /* AccountRepositoryProtocol.swift in Sources */,
 				0B4EBBE82170F888004CE93C /* AccountRepository.swift in Sources */,
 				0B795963216D01E800AE44AF /* SplashRouter.swift in Sources */,
+				0B4EBBEA21716CFE004CE93C /* TestViewController.swift in Sources */,
 				0B7FF063216AE13600161B22 /* LoginProtocols.swift in Sources */,
 				0B7FF056216ADF5100161B22 /* MainRouter.swift in Sources */,
 				0B7FF062216AE13600161B22 /* LoginViewController.swift in Sources */,
