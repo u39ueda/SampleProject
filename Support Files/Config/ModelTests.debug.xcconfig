@@ -1,0 +1,18 @@
+//
+//  ModelTests.xcconfig
+//  SampleProject
+//
+//  Created by 植田裕作 on 2018/10/13.
+//  Copyright © 2018年 Yusaku Ueda. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Support Files/Config/Base.debug.xcconfig"
+#include "Pods/Target Support Files/Pods-ModelTests/Pods-ModelTests.debug.xcconfig"
+
+// Info.plistのパス
+INFOPLIST_FILE = ModelTests/Info.plist
+// Bundle Identifier
+PRODUCT_BUNDLE_IDENTIFIER = net.u39-ueda.ModelTests

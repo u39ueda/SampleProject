@@ -36,4 +36,24 @@ target 'SampleProject' do
       # Pods for Common testing
   end
 
+  target 'Model' do
+      inherit! :search_paths
+      # Pods for Model
+  end
+
+  target 'ModelTests' do
+      inherit! :search_paths
+      # Pods for Model testing
+  end
+
+  target 'Presentation' do
+      inherit! :search_paths
+      # Pods for Presentation
+  end
+
+  target 'Component' do
+      inherit! :search_paths
+      # Pods for Component
+  end
+
 end
