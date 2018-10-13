@@ -21,7 +21,7 @@ final class LoginPresenter: LoginPresenterProtocol {
     private let router: LoginWireframeProtocol
     var loginUsecase: LoginUsecaseProtocol?
     private let isLoginExecuting = BehaviorRelay<Bool>(value: false)
-    private let loginDisposable = SingleAssignmentDisposable()
+    private let loginDisposable = SerialDisposable()
 
     // MARK: - Life cycle
 
@@ -64,7 +64,7 @@ final class LoginPresenter: LoginPresenterProtocol {
                 log.info("failure execute. error=\(error)")
                 self.isLoginExecuting.accept(false)
             })
-        loginDisposable.setDisposable(disposable)
+        loginDisposable.disposable = disposable
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             log.info("finish execute")
