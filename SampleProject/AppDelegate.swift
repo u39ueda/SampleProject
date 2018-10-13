@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         // 画面作成
+        #if TEST_ENABLED
+        let vc = TestViewController()
+        #else
         let vc: SplashViewController = SplashRouter.createModule()
+        #endif
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = AppViewController(viewController: vc)
         window?.makeKeyAndVisible()

@@ -6,6 +6,8 @@
 //  Copyright © 2018年 Yusaku Ueda. All rights reserved.
 //
 
+#if TEST_ENABLED
+
 import UIKit
 import Common
 
@@ -95,3 +97,5 @@ final class TestViewController: UITableViewController {
         item.selectedBlock(appVC)
     }
 }
+
+#endif
