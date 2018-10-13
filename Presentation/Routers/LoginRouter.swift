@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Model
 
 final class LoginRouter: LoginWireframeProtocol {
 
@@ -19,7 +20,7 @@ final class LoginRouter: LoginWireframeProtocol {
     /// Factory method
     static func createModule() -> LoginViewController {
         // Change to get view from storyboard if not using progammatic UI
-        let view = LoginViewController(nibName: nil, bundle: nil)
+        let view = LoginViewController(nibName: nil, bundle: Bundle(for: LoginViewController.self))
         let router = LoginRouter()
         let presenter = LoginPresenter(interface: view, router: router)
         let repository = AccountRepository.shared

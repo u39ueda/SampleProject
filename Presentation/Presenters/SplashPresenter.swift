@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Model
 
 final class SplashPresenter: SplashPresenterProtocol {
 
@@ -38,9 +39,7 @@ final class SplashPresenter: SplashPresenterProtocol {
     }
 
     func viewDidAppear(_ animated: Bool) {
-        let vc = MainRouter.createModule()
-        let navi = UINavigationController(rootViewController: vc)
-        AppDelegate.shared.appViewController.setCurrentViewController(navi, animated: true)
+        self.router.showMain()
     }
 
     func viewWillDisappear(_ animated: Bool) {

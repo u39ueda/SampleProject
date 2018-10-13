@@ -8,6 +8,7 @@
 
 import UIKit
 import Common
+import Presentation
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

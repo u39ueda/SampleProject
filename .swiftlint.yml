@@ -6,11 +6,17 @@
 
 included:
   - SampleProject
+  - Common
+  - Model
+  - Presentation
+  - Component
 excluded:
   - Carthage
   - Pods
   - SampleProjectTests
   - SampleProjectUITests
+  - CommonTests
+  - ModelTests
   - "*/*.generated.swift"
 opt_in_rules:
 

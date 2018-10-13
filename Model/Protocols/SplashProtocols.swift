@@ -17,6 +17,8 @@ import Foundation
 /// Routerに適用する.
 /// Presenter -> Wireframe
 public protocol SplashWireframeProtocol: class {
+    /// メイン画面を表示する
+    func showMain()
 }
 
 // MARK: - Presenter

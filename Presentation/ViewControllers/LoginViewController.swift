@@ -10,6 +10,7 @@
 
 import UIKit
 import Common
+import Model
 import RxSwift
 import RxCocoa
 

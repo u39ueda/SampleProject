@@ -12,10 +12,10 @@
         <!--LaunchScreen-->
         <scene sceneID="wAP-sh-hF2">
             <objects>
-                <viewControllerPlaceholder storyboardName="LaunchScreen" id="e3a-VQ-aOZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="LaunchScreen" bundleIdentifier="net.u39-ueda.SampleProject" id="e3a-VQ-aOZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ek-G8-thD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="363"/>
+            <point key="canvasLocation" x="770" y="133"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">

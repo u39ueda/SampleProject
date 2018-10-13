@@ -26,7 +26,7 @@ private struct TestItem {
 }
 
 /// テスト用の画面遷移ショートカット画面
-final class TestViewController: UITableViewController {
+public final class TestViewController: UITableViewController {
 
     // MARK: - IBOutlet
 
@@ -52,7 +52,7 @@ final class TestViewController: UITableViewController {
 
     // MARK: - Life cycle
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
@@ -65,17 +65,17 @@ final class TestViewController: UITableViewController {
     // MARK: - UITableViewDataSource
 
     /// セクションの数を返す
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override public func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
 
     /// セクション内のセルの数を返す
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].items.count
     }
 
     /// セルを初期化する
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         let item = sections[indexPath.section].items[indexPath.row]
         cell.textLabel?.text = item.title
@@ -84,16 +84,16 @@ final class TestViewController: UITableViewController {
     }
 
     /// セクションのタイトルを返す
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section].title
     }
 
     // MARK: UITableViewDelegate
 
     /// セルが選択された時の処理
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = sections[indexPath.section].items[indexPath.row]
-        let appVC = AppDelegate.shared.appViewController
+        let appVC = view.window?.rootViewController as! AppViewController
         item.selectedBlock(appVC)
     }
 }

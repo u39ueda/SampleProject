@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Model
 
 final class MainRouter: MainWireframeProtocol {
 
@@ -19,7 +20,7 @@ final class MainRouter: MainWireframeProtocol {
     /// Factory method
     static func createModule() -> MainViewController {
         // Change to get view from storyboard if not using progammatic UI
-        let view = MainViewController(nibName: nil, bundle: nil)
+        let view = MainViewController(nibName: nil, bundle: Bundle(for: MainViewController.self))
         let router = MainRouter()
         let presenter = MainPresenter(interface: view, router: router)
 

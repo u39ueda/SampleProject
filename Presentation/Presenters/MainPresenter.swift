@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Model
 
 final class MainPresenter: MainPresenterProtocol {
 

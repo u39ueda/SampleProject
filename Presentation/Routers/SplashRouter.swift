@@ -9,6 +9,8 @@
 //
 
 import UIKit
+import Common
+import Model
 
 final class SplashRouter: SplashWireframeProtocol {
 
@@ -38,4 +40,11 @@ final class SplashRouter: SplashWireframeProtocol {
     }
 
     // MARK: - WireframeProtocol
+
+    func showMain() {
+        let vc = MainRouter.createModule()
+        let navi = UINavigationController(rootViewController: vc)
+        let appViewController = viewController?.view.window?.rootViewController as? AppViewController
+        appViewController?.setCurrentViewController(navi, animated: true)
+    }
 }
