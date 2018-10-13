@@ -11,3 +11,8 @@
 
 #include "Support Files/Config/Base.debug.xcconfig"
 #include "Pods/Target Support Files/Pods-SampleProject/Pods-SampleProject.debug.xcconfig"
+
+// Info.plistのパス
+INFOPLIST_FILE = SampleProject/Resources/Info.plist
+// Bundle Identifier
+PRODUCT_BUNDLE_IDENTIFIER = net.u39-ueda.SampleProject

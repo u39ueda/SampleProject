@@ -11,3 +11,8 @@
 
 #include "Support Files/Config/Base.release.xcconfig"
 #include "Pods/Target Support Files/Pods-CommonTests/Pods-CommonTests.release.xcconfig"
+
+// Info.plistのパス
+INFOPLIST_FILE = CommonTests/Info.plist
+// Bundle Identifier
+PRODUCT_BUNDLE_IDENTIFIER = net.u39-ueda.CommonTests

@@ -11,3 +11,8 @@
 
 #include "Support Files/Config/Base.debug.xcconfig"
 #include "Pods/Target Support Files/Pods-Common/Pods-Common.debug.xcconfig"
+
+// Info.plistのパス
+INFOPLIST_FILE = Common/Resources/Info.plist
+// Bundle Identifier
+PRODUCT_BUNDLE_IDENTIFIER = net.u39-ueda.Common

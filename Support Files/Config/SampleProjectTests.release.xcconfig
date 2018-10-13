@@ -11,3 +11,8 @@
 
 #include "Support Files/Config/Base.release.xcconfig"
 #include "Pods/Target Support Files/Pods-SampleProjectTests/Pods-SampleProjectTests.release.xcconfig"
+
+// Info.plistのパス
+INFOPLIST_FILE = SampleProjectTests/Info.plist
+// Bundle Identifier
+PRODUCT_BUNDLE_IDENTIFIER = net.u39-ueda.SampleProjectTests
