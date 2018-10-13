@@ -52,6 +52,9 @@
 		0B96AC3D2171DD4000CCCCA5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EBBE921716CFE004CE93C /* TestViewController.swift */; };
 		0B96AC3E2171DD4700CCCCA5 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7E9FFE2167C985005A70CE /* Splash.storyboard */; };
 		0B96AC4D2171E08A00CCCCA5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96AC4C2171E08A00CCCCA5 /* R.generated.swift */; };
+		0B96AC5A2171EED200CCCCA5 /* UserInformationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96AC592171EED200CCCCA5 /* UserInformationEntity.swift */; };
+		0B96AC5E2171EF3200CCCCA5 /* BookingListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96AC5C2171EF3200CCCCA5 /* BookingListEntity.swift */; };
+		0B96AC602171EF8700CCCCA5 /* CredentialEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96AC5F2171EF8700CCCCA5 /* CredentialEntity.swift */; };
 		0BACF50A216A631E00795DAF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BACF509216A631E00795DAF /* main.swift */; };
 		0BACF50C216A63AD00795DAF /* UnitTestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BACF50B216A63AD00795DAF /* UnitTestsAppDelegate.swift */; };
 		0BACF50F216A650C00795DAF /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BACF50E216A650C00795DAF /* AppViewController.swift */; };
@@ -270,6 +273,9 @@
 		0B96AC262171DA0800CCCCA5 /* ModelTests.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ModelTests.release.xcconfig; sourceTree = "<group>"; };
 		0B96AC272171DA0800CCCCA5 /* Component.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Component.debug.xcconfig; sourceTree = "<group>"; };
 		0B96AC4C2171E08A00CCCCA5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		0B96AC592171EED200CCCCA5 /* UserInformationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationEntity.swift; sourceTree = "<group>"; };
+		0B96AC5C2171EF3200CCCCA5 /* BookingListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingListEntity.swift; sourceTree = "<group>"; };
+		0B96AC5F2171EF8700CCCCA5 /* CredentialEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialEntity.swift; sourceTree = "<group>"; };
 		0BACF509216A631E00795DAF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0BACF50B216A63AD00795DAF /* UnitTestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestsAppDelegate.swift; sourceTree = "<group>"; };
 		0BACF50E216A650C00795DAF /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
@@ -698,6 +704,9 @@
 		0BF6072E216ABE7D006EE7FD /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				0B96AC592171EED200CCCCA5 /* UserInformationEntity.swift */,
+				0B96AC5C2171EF3200CCCCA5 /* BookingListEntity.swift */,
+				0B96AC5F2171EF8700CCCCA5 /* CredentialEntity.swift */,
 			);
 			name = Entities;
 			path = ../SampleProject/Model/Entities;
@@ -1494,9 +1503,12 @@
 			files = (
 				0B96AC2D2171DD0B00CCCCA5 /* SplashProtocols.swift in Sources */,
 				0B96AC2E2171DD1100CCCCA5 /* AccountRepositoryProtocol.swift in Sources */,
+				0B96AC602171EF8700CCCCA5 /* CredentialEntity.swift in Sources */,
 				0B96AC2F2171DD1700CCCCA5 /* LoginUsecaseProtocol.swift in Sources */,
 				0B96AC302171DD1E00CCCCA5 /* AccountRepository.swift in Sources */,
+				0B96AC5E2171EF3200CCCCA5 /* BookingListEntity.swift in Sources */,
 				0B96AC312171DD2500CCCCA5 /* LoginUsecase.swift in Sources */,
+				0B96AC5A2171EED200CCCCA5 /* UserInformationEntity.swift in Sources */,
 				0B96AC2C2171DD0B00CCCCA5 /* MainProtocols.swift in Sources */,
 				0B96AC2B2171DD0B00CCCCA5 /* LoginProtocols.swift in Sources */,
 			);
