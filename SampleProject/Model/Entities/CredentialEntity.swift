@@ -10,6 +10,9 @@ import Foundation
 
 /// 認証情報のエンティティ
 public struct CredentialEntity {
+
+    // MARK: Properties
+
     /// 会員ID
     public var memberId: String?
     /// パスワード
@@ -18,6 +21,8 @@ public struct CredentialEntity {
     public var token: String?
     /// 認証トークン最終更新日時
     public var lastTokenRefreshDate: Date?
+
+    // MARK: - Life cycle
 
     /// コンストラクタ
     public init() {
@@ -30,4 +35,11 @@ public struct CredentialEntity {
         self.token = token
         self.lastTokenRefreshDate = lastTokenRefreshDate
     }
+
+    // MARK: - Methods
+
+    public var isLogin: Bool {
+        return memberId != nil && password != nil && token != nil
+    }
+
 }

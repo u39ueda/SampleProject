@@ -9,6 +9,7 @@
 //
 
 import Foundation
+import RxSwift
 
 // MARK: - Wireframe
 
@@ -39,6 +40,9 @@ public protocol MainPresenterProtocol: class {
     func onLoginButton()
 
     // MARK: Presenter -> ViewController
+
+    /// 購読可能なログイン済みフラグ
+    var isLoginValue: Observable<Bool> { get }
 }
 
 // MARK: - View

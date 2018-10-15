@@ -10,6 +10,8 @@
 
 import UIKit
 import Model
+import RxSwift
+import RxCocoa
 
 final class MainPresenter: MainPresenterProtocol {
 
@@ -17,6 +19,9 @@ final class MainPresenter: MainPresenterProtocol {
 
     private weak var view: MainViewProtocol?
     private let router: MainWireframeProtocol
+    var accountRepository: AccountRepositoryProtocol?
+    private let disposeBag = DisposeBag()
+    private let isLoginRelay = BehaviorRelay<Bool>(value: false)
 
     // MARK: - Life cycle
 
@@ -33,6 +38,10 @@ final class MainPresenter: MainPresenterProtocol {
     // MARK: ViewController -> Presenter
 
     func viewDidLoad() {
+        accountRepository?.currentCredential
+            .subscribe(onNext: { [weak self] (credential: CredentialEntity) in
+            self?.isLoginRelay.accept(credential.isLogin)
+        }).disposed(by: disposeBag)
     }
 
     func viewWillAppear(_ animated: Bool) {
@@ -48,6 +57,12 @@ final class MainPresenter: MainPresenterProtocol {
     }
 
     // MARK: Presenter -> ViewController
+
+    /// 購読可能なログイン済みフラグ
+    var isLoginValue: Observable<Bool> {
+        return isLoginRelay.asObservable()
+            .distinctUntilChanged() // 値が変化した時のみ通知する
+    }
 }
 
 // MARK: - Action
