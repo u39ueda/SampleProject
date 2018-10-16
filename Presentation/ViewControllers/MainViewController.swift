@@ -10,12 +10,21 @@
 
 import UIKit
 import Model
+import RxSwift
 
 final class MainViewController: UIViewController, MainViewProtocol {
 
     // MARK: - IBOutlet
 
+    @IBOutlet weak var notLoginContainerView: UIView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginContainerView: UIView!
+    @IBOutlet weak var fetchDateLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+
     // MARK: Properties
+
+    private let disposeBag = DisposeBag()
 
 	var presenter: MainPresenterProtocol?
 
@@ -26,6 +35,8 @@ final class MainViewController: UIViewController, MainViewProtocol {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+
+        bindViews()
 
         presenter?.viewDidLoad()
     }
@@ -64,6 +75,26 @@ final class MainViewController: UIViewController, MainViewProtocol {
 }
 
 // MARK: - Methods
+
+extension MainViewController {
+    /// ビューと値をバインドする
+    private func bindViews() {
+        // ログイン済みフラグを画面に割り当てる
+        presenter?.isLoginValue
+            .subscribe(onNext: { [weak self] (isLogin: Bool) in
+                self?.notLoginContainerView.isHidden = isLogin
+                self?.loginContainerView.isHidden = !isLogin
+            })
+            .disposed(by: disposeBag)
+        // ユーザ情報
+        presenter?.userInformationValue
+            .subscribe(onNext: { [weak self] (userInformation) in
+                self?.userNameLabel.text = userInformation.username
+                self?.fetchDateLabel.text = userInformation.fetchDateString
+            })
+            .disposed(by: disposeBag)
+    }
+}
 
 // MARK: - Actions
 

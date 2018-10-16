@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,44 +12,91 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="fetchDateLabel" destination="QT8-no-aqE" id="SuI-Aw-rdo"/>
+                <outlet property="loginButton" destination="6Ih-83-7Jc" id="01X-Gd-rnr"/>
+                <outlet property="loginContainerView" destination="s3B-lw-jDz" id="CT7-aW-MdV"/>
+                <outlet property="notLoginContainerView" destination="9IH-jx-Dec" id="3FE-4N-arl"/>
+                <outlet property="userNameLabel" destination="tJc-yS-9Nv" id="b63-pI-3ql"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IH-jx-Dec">
+                    <rect key="frame" x="20" y="88" width="339" height="690"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ih-83-7Jc">
+                            <rect key="frame" x="0.0" y="626" width="339" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="C4Z-dQ-ayw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="ログイン">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onLoginButton:" destination="-1" eventType="touchUpInside" id="TTd-Dg-gGX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="6Ih-83-7Jc" secondAttribute="trailing" id="FRi-PB-VJp"/>
+                        <constraint firstItem="6Ih-83-7Jc" firstAttribute="leading" secondItem="9IH-jx-Dec" secondAttribute="leading" id="YYf-qZ-C5U"/>
+                        <constraint firstAttribute="bottom" secondItem="6Ih-83-7Jc" secondAttribute="bottom" constant="20" id="mHj-7a-bh8"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3B-lw-jDz">
+                    <rect key="frame" x="16" y="88" width="343" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018/10/10 10:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QT8-no-aqE">
+                            <rect key="frame" x="0.0" y="0.0" width="129.33333333333334" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taro Urashima" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJc-yS-9Nv">
+                            <rect key="frame" x="0.0" y="29" width="110.33333333333333" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tJc-yS-9Nv" secondAttribute="bottom" id="2dF-Ce-Vsn"/>
+                        <constraint firstItem="QT8-no-aqE" firstAttribute="top" secondItem="s3B-lw-jDz" secondAttribute="top" id="9od-Gf-hox"/>
+                        <constraint firstItem="tJc-yS-9Nv" firstAttribute="top" secondItem="QT8-no-aqE" secondAttribute="bottom" constant="8" id="Ixn-cp-0hR"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tJc-yS-9Nv" secondAttribute="trailing" id="Vn4-Am-zHG"/>
+                        <constraint firstItem="tJc-yS-9Nv" firstAttribute="leading" secondItem="s3B-lw-jDz" secondAttribute="leading" id="Wwf-Ju-bQ7"/>
+                        <constraint firstItem="QT8-no-aqE" firstAttribute="leading" secondItem="s3B-lw-jDz" secondAttribute="leading" id="dAv-Cd-AU2"/>
+                    </constraints>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4j-ul-jSj">
-                    <rect key="frame" x="153.5" y="314" width="68" height="39"/>
+                    <rect key="frame" x="153.66666666666666" y="386.66666666666669" width="68" height="39"/>
                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ih-83-7Jc">
-                    <rect key="frame" x="20" y="615" width="335" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="C4Z-dQ-ayw"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="ログイン">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="onLoginButton:" destination="-1" eventType="touchUpInside" id="TTd-Dg-gGX"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="D4j-ul-jSj" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4Z7-Rw-8uE"/>
-                <constraint firstItem="gOX-2K-QXd" firstAttribute="bottom" secondItem="6Ih-83-7Jc" secondAttribute="bottom" constant="8" id="Dsv-p5-yg3"/>
+                <constraint firstItem="9IH-jx-Dec" firstAttribute="top" secondItem="gOX-2K-QXd" secondAttribute="top" id="62t-Bn-JAu"/>
+                <constraint firstItem="s3B-lw-jDz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="7IS-k3-DdD"/>
+                <constraint firstItem="s3B-lw-jDz" firstAttribute="top" secondItem="gOX-2K-QXd" secondAttribute="top" id="EdB-BA-eM5"/>
+                <constraint firstAttribute="trailingMargin" secondItem="s3B-lw-jDz" secondAttribute="trailing" id="Iv4-D3-Sfn"/>
+                <constraint firstItem="gOX-2K-QXd" firstAttribute="bottom" secondItem="9IH-jx-Dec" secondAttribute="bottom" id="TdW-GY-Iif"/>
                 <constraint firstItem="D4j-ul-jSj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="W1s-4k-C14"/>
-                <constraint firstItem="6Ih-83-7Jc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="dEy-ui-Ym5"/>
-                <constraint firstAttribute="trailing" secondItem="6Ih-83-7Jc" secondAttribute="trailing" constant="20" id="sjw-aB-OO5"/>
+                <constraint firstItem="9IH-jx-Dec" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="4" id="jIc-qs-hd1"/>
+                <constraint firstAttribute="trailingMargin" secondItem="9IH-jx-Dec" secondAttribute="trailing" id="mTa-7y-1wQ"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="gOX-2K-QXd"/>
+            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
         </view>
     </objects>
 </document>

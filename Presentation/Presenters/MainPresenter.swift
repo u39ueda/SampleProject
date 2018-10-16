@@ -22,6 +22,7 @@ final class MainPresenter: MainPresenterProtocol {
     var accountRepository: AccountRepositoryProtocol?
     private let disposeBag = DisposeBag()
     private let isLoginRelay = BehaviorRelay<Bool>(value: false)
+    private let userInformationRelay = BehaviorRelay<MainUserInformationViewObject>(value: .init())
 
     // MARK: - Life cycle
 
@@ -62,6 +63,11 @@ final class MainPresenter: MainPresenterProtocol {
     var isLoginValue: Observable<Bool> {
         return isLoginRelay.asObservable()
             .distinctUntilChanged() // 値が変化した時のみ通知する
+    }
+
+    /// ユーザ情報
+    var userInformationValue: Observable<MainUserInformationViewObject> {
+        return userInformationRelay.asObservable()
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07E4E0873A9A4C592A4CEB5D /* Pods_CommonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F311FB83F4ADF02AD0A3F6 /* Pods_CommonTests.framework */; };
+		0B08622F2176497D00E870E8 /* MainViewObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08622E2176497D00E870E8 /* MainViewObjects.swift */; };
 		0B08B49021684C660066C57A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08B48F21684C660066C57A /* R.generated.swift */; };
 		0B2BBC26216858F6002E2209 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2BBC1D216858F6002E2209 /* Common.framework */; };
 		0B2BBC2D216858F7002E2209 /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2BBC2C216858F7002E2209 /* CommonTests.swift */; };
@@ -201,6 +202,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B08622E2176497D00E870E8 /* MainViewObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewObjects.swift; sourceTree = "<group>"; };
 		0B08B48F21684C660066C57A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		0B2BBC1D216858F6002E2209 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2BBC1F216858F6002E2209 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -715,9 +717,9 @@
 		0BF6072F216ABE86006EE7FD /* ViewObjects */ = {
 			isa = PBXGroup;
 			children = (
+				0B08622E2176497D00E870E8 /* MainViewObjects.swift */,
 			);
-			name = ViewObjects;
-			path = ../SampleProject/Presentation/ViewObjects;
+			path = ViewObjects;
 			sourceTree = "<group>";
 		};
 		0BF60730216ABF01006EE7FD /* Resources */ = {
@@ -1506,6 +1508,7 @@
 				0B96AC602171EF8700CCCCA5 /* CredentialEntity.swift in Sources */,
 				0B96AC2F2171DD1700CCCCA5 /* LoginUsecaseProtocol.swift in Sources */,
 				0B96AC302171DD1E00CCCCA5 /* AccountRepository.swift in Sources */,
+				0B08622F2176497D00E870E8 /* MainViewObjects.swift in Sources */,
 				0B96AC5E2171EF3200CCCCA5 /* BookingListEntity.swift in Sources */,
 				0B96AC312171DD2500CCCCA5 /* LoginUsecase.swift in Sources */,
 				0B96AC5A2171EED200CCCCA5 /* UserInformationEntity.swift in Sources */,

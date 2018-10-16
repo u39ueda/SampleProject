@@ -10,6 +10,7 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 // MARK: - Wireframe
 
@@ -43,6 +44,8 @@ public protocol MainPresenterProtocol: class {
 
     /// 購読可能なログイン済みフラグ
     var isLoginValue: Observable<Bool> { get }
+    /// ユーザ情報
+    var userInformationValue: Observable<MainUserInformationViewObject> { get }
 }
 
 // MARK: - View
