@@ -43,6 +43,14 @@ final class MainPresenter: MainPresenterProtocol {
             .subscribe(onNext: { [weak self] (credential: CredentialEntity) in
             self?.isLoginRelay.accept(credential.isLogin)
         }).disposed(by: disposeBag)
+        accountRepository?.currentUserInformation
+            .flatMap { [weak self] (userInformation: UserInformationEntity) -> Observable<MainUserInformationViewObject> in
+                return Observable.wrap(self?.convert(userInformation))
+            }
+            .subscribe(onNext: { [weak self] (viewObject: MainUserInformationViewObject) in
+                self?.userInformationRelay.accept(viewObject)
+            })
+            .disposed(by: disposeBag)
     }
 
     func viewWillAppear(_ animated: Bool) {
@@ -76,5 +84,39 @@ final class MainPresenter: MainPresenterProtocol {
 extension MainPresenter {
     func onLoginButton() {
         router.showLogin()
+    }
+
+    func convert(_ userInformation: UserInformationEntity) -> MainUserInformationViewObject {
+        let username: String
+        switch (userInformation.firstName, userInformation.lastName) {
+        case let (firstName?, lastName?):
+            username = "\(firstName) \(lastName)"
+        case let (firstName?, nil):
+            username = "\(firstName)"
+        case let (nil, lastName?):
+            username = "\(lastName)"
+        case (nil, nil):
+            username = "-"
+        }
+        let fetchDateString: String
+        if let fetchDate = userInformation.fetchDate {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .medium
+            fetchDateString = formatter.string(from: fetchDate)
+        } else {
+            fetchDateString = "-"
+        }
+        return MainUserInformationViewObject(username: username, fetchDateString: fetchDateString)
+    }
+}
+
+extension ObservableType {
+    static func wrap(_ obj: E?) -> Observable<E> {
+        if let obj = obj {
+            return self.just(obj)
+        } else {
+            return self.empty()
+        }
     }
 }
