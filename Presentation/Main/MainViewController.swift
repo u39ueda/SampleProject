@@ -30,6 +30,14 @@ final class MainViewController: UIViewController, MainViewProtocol {
 
     // MARK: - Life cycle
 
+    init() {
+        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     deinit {
     }
 
