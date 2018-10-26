@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // 画面作成
         #if TEST_ENABLED
-        let vc = TestViewController()
+        let vc = UINavigationController(rootViewController: TestViewController())
         #else
         let vc: SplashViewController = SplashRouter.createModule()
         #endif

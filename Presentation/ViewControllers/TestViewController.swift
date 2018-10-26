@@ -40,11 +40,14 @@ public final class TestViewController: UITableViewController {
             }),
             TestItem(title: "メイン", subtitle: nil, selectedBlock: { (appVC) in
                 let vc = MainRouter.createModule()
-                appVC.currentViewController = vc
+                let navi = UINavigationController(rootViewController: vc)
+                appVC.currentViewController = navi
             }),
             TestItem(title: "ログイン", subtitle: nil, selectedBlock: { (appVC) in
                 let vc = LoginRouter.createModule()
-                appVC.currentViewController = vc
+                let navi = UINavigationController(rootViewController: vc)
+                navi.viewControllers = [UIViewController(), vc]
+                appVC.currentViewController = navi
             }),
             ])
         return [section1]
