@@ -413,8 +413,8 @@
 			isa = PBXGroup;
 			children = (
 				0B7E9FFE2167C985005A70CE /* Splash.storyboard */,
-				0B79595F216D01E800AE44AF /* SplashRouter.swift */,
 				0B79595E216D01E800AE44AF /* SplashPresenter.swift */,
+				0B79595F216D01E800AE44AF /* SplashRouter.swift */,
 				0B795960216D01E800AE44AF /* SplashViewController.swift */,
 			);
 			path = Splash;
