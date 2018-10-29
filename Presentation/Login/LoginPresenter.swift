@@ -55,7 +55,7 @@ final class LoginPresenter: LoginPresenterProtocol {
 
     func onLoginButton(memberId: String, password: String) {
         guard let loginUsecase = loginUsecase else { return }
-        log.info("start")
+        log.info("start: memberId=\(memberId), password=\(password)")
         isLoginExecuting.accept(true)
         let disposable = loginUsecase.login(memberId: memberId, password: password)
             .subscribe(onSuccess: {

@@ -11,6 +11,7 @@
 import UIKit
 import Common
 import Model
+import Component
 import RxSwift
 import RxCocoa
 
@@ -18,10 +19,8 @@ final class LoginViewController: UIViewController, LoginViewProtocol {
 
     // MARK: - IBOutlet
 
-    @IBOutlet weak var memberIdLabel: UILabel!
-    @IBOutlet weak var memberIdTextField: UITextField!
-    @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var memberIdTextField: TitleTextFieldView!
+    @IBOutlet weak var passwordTextField: TitleTextFieldView!
     @IBOutlet weak var loginButton: UIButton!
 
     // MARK: Properties
@@ -102,8 +101,8 @@ extension LoginViewController {
 
 extension LoginViewController {
     @IBAction func onLoginButton(_ sender: UIButton) {
-        let memberId: String = memberIdTextField.text ?? ""
-        let password: String = passwordTextField.text ?? ""
+        let memberId: String = memberIdTextField.text
+        let password: String = passwordTextField.text
         presenter?.onLoginButton(memberId: memberId, password: password)
     }
 }
