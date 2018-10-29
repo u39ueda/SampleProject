@@ -10,6 +10,8 @@
 		07E4E0873A9A4C592A4CEB5D /* Pods_CommonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F311FB83F4ADF02AD0A3F6 /* Pods_CommonTests.framework */; };
 		0B08622F2176497D00E870E8 /* MainViewObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08622E2176497D00E870E8 /* MainViewObjects.swift */; };
 		0B08B49021684C660066C57A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08B48F21684C660066C57A /* R.generated.swift */; };
+		0B29DBB721837BDC00A6079F /* TitleTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29DBB621837BDC00A6079F /* TitleTextFieldView.swift */; };
+		0B29DBB921837C2300A6079F /* TitleTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B29DBB821837C2300A6079F /* TitleTextFieldView.xib */; };
 		0B2BBC26216858F6002E2209 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2BBC1D216858F6002E2209 /* Common.framework */; };
 		0B2BBC2D216858F7002E2209 /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2BBC2C216858F7002E2209 /* CommonTests.swift */; };
 		0B2BBC2F216858F7002E2209 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B2BBC1F216858F6002E2209 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -207,6 +209,8 @@
 /* Begin PBXFileReference section */
 		0B08622E2176497D00E870E8 /* MainViewObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewObjects.swift; sourceTree = "<group>"; };
 		0B08B48F21684C660066C57A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		0B29DBB621837BDC00A6079F /* TitleTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldView.swift; sourceTree = "<group>"; };
+		0B29DBB821837C2300A6079F /* TitleTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTextFieldView.xib; sourceTree = "<group>"; };
 		0B2BBC1D216858F6002E2209 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2BBC1F216858F6002E2209 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		0B2BBC20216858F6002E2209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -682,9 +686,10 @@
 		0BF60723216ABCEB006EE7FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0B29DBB621837BDC00A6079F /* TitleTextFieldView.swift */,
+				0B29DBB821837C2300A6079F /* TitleTextFieldView.xib */,
 			);
-			name = Views;
-			path = ../SampleProject/Presentation/Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0BF60724216ABCF8006EE7FD /* Usecases */ = {
@@ -1064,6 +1069,7 @@
 					};
 					0B96AC132171D85F00CCCCA5 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -1159,6 +1165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B29DBB921837C2300A6079F /* TitleTextFieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1575,6 +1582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B29DBB721837BDC00A6079F /* TitleTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2144,6 +2152,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B96AC272171DA0800CCCCA5 /* Component.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2159,6 +2168,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2170,6 +2180,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B96AC222171DA0700CCCCA5 /* Component.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
