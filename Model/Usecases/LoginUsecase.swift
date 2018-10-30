@@ -15,6 +15,7 @@ public final class LoginUsecase: LoginUsecaseProtocol {
     // MARK: Properties
 
     public weak var accountRepository: AccountRepositoryProtocol?
+    public var userDefaults: UserDefaultsManagerProtocol?
 
     // MARK: - Life cycle
 
@@ -30,11 +31,20 @@ public final class LoginUsecase: LoginUsecaseProtocol {
     ///   - password: パスワード
     /// - Returns: 完了または失敗の通知
     public func login(memberId: String, password: String) -> Single<Void> {
-        return Single.create { (observer) -> Disposable in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                observer(.success(()))
+        // ユーザ情報取得APIのダミー呼び出し
+        func callUserInformation() -> Single<UserInformationEntity> {
+            return Single.create { (observer) -> Disposable in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    let userInfo = UserInformationEntity(lastName: "太郎", firstName: "山田", token: "0123456789ABCDEF", fetchDate: Date())
+                    observer(.success(userInfo))
+                }
+                return Disposables.create()
             }
-            return Disposables.create()
         }
+        return callUserInformation()
+            .do(onSuccess: { (userInformation: UserInformationEntity) in
+                self.userDefaults?.credential = CredentialEntity(memberId: memberId, password: password, token: userInformation.token, lastTokenRefreshDate: userInformation.fetchDate)
+            })
+            .map({ _ in return () })
     }
 }
