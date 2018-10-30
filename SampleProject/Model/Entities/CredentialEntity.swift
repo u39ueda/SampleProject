@@ -9,7 +9,7 @@
 import Foundation
 
 /// 認証情報のエンティティ
-public struct CredentialEntity {
+public struct CredentialEntity: Codable {
 
     // MARK: Properties
 
