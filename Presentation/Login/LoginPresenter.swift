@@ -56,21 +56,26 @@ final class LoginPresenter: LoginPresenterProtocol {
     func onLoginButton(memberId: String, password: String) {
         guard let loginUsecase = loginUsecase else { return }
         log.info("start: memberId=\(memberId), password=\(password)")
+        // ログイン実行中フラグON
         isLoginExecuting.accept(true)
+        // ログイン処理開始
         let disposable = loginUsecase.login(memberId: memberId, password: password)
             .subscribe(onSuccess: {
+                // ログイン処理成功
                 log.info("finish execute")
+                // ログイン実行中フラグOFF
                 self.isLoginExecuting.accept(false)
+                // ログイン画面を閉じる
+                self.router.closeLogin()
             }, onError: { (error: Error) in
+                // ログイン処理失敗
                 log.info("failure execute. error=\(error)")
+                // ログイン実行中フラグOFF
                 self.isLoginExecuting.accept(false)
+                // TODO: エラーメッセージ表示
             })
+        // 前回のログイン処理をキャンセルして今回のログイン処理を保持
         loginDisposable.disposable = disposable
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            log.info("finish execute")
-            self.isLoginExecuting.accept(false)
-        }
         log.info("finish")
     }
 

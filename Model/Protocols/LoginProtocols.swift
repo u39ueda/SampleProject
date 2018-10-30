@@ -18,6 +18,8 @@ import RxSwift
 /// Routerに適用する.
 /// Presenter -> Wireframe
 public protocol LoginWireframeProtocol: class {
+    /// ログイン画面を閉じる
+    func closeLogin()
 }
 
 // MARK: - Presenter

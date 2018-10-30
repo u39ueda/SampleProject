@@ -43,4 +43,10 @@ final class LoginRouter: LoginWireframeProtocol {
     }
 
     // MARK: - WireframeProtocol
+
+    /// ログイン画面を閉じる
+    func closeLogin() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
+
 }
