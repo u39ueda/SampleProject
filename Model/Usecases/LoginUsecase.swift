@@ -28,13 +28,13 @@ public final class LoginUsecase: LoginUsecaseProtocol {
     /// - Parameters:
     ///   - memberId: 会員ID
     ///   - password: パスワード
-    /// - Returns: 完了の通知
+    /// - Returns: 完了または失敗の通知
     public func login(memberId: String, password: String) -> Single<Void> {
-        return Observable.create({ (observer) -> Disposable in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                observer.onCompleted()
-            })
+        return Single.create { (observer) -> Disposable in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                observer(.success(()))
+            }
             return Disposables.create()
-        }).asSingle()
+        }
     }
 }

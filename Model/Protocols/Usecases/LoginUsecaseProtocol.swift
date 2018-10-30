@@ -20,6 +20,6 @@ public protocol LoginUsecaseProtocol: class {
     /// - Parameters:
     ///   - memberId: 会員ID
     ///   - password: パスワード
-    /// - Returns: 完了の通知
+    /// - Returns: 完了または失敗の通知
     func login(memberId: String, password: String) -> Single<Void>
 }
