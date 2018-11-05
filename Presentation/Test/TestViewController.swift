@@ -49,6 +49,10 @@ public final class TestViewController: UITableViewController {
                 navi.viewControllers = [UIViewController(), vc]
                 appVC.currentViewController = navi
             }),
+            TestItem(title: "WebView", subtitle: nil, selectedBlock: { (appVC) in
+                let vc = WebViewRouter.createModule(request: "https://www.google.co.jp/")
+                appVC.present(vc, animated: true)
+            }),
             ])
         return [section1]
     }()
